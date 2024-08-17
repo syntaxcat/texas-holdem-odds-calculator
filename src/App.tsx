@@ -52,6 +52,32 @@ const createDeck = (): Card[] => {
 
 // createDeck()
 
+const isFlush = (cards: Card[]): boolean => {
+  // Map the cards array to get an array of suits
+  const suits = cards.map((card) => card.suit)
+  // Check if all suits are the same by comparing each suit to the first suit
+  return suits.every((suit) => suit === suits[0])
+}
+
+// const hand1: Card[] = [
+//   {rank: "A", suit: "Hearts"},
+//   {rank: "K", suit: "Hearts"},
+//   {rank: "Q", suit: "Hearts"},
+//   {rank: "J", suit: "Hearts"},
+//   {rank: "10", suit: "Hearts"}
+// ]
+
+// const hand2: Card[] = [
+//   {rank: "A", suit: "Hearts"},
+//   {rank: "K", suit: "Diamonds"},
+//   {rank: "Q", suit: "Hearts"},
+//   {rank: "J", suit: "Hearts"},
+//   {rank: "10", suit: "Hearts"}
+// ]
+
+// console.log(isFlush(hand1)) // Output: true
+// console.log(isFlush(hand2)) // Output: false
+
 function App() {
   return (
     <>
